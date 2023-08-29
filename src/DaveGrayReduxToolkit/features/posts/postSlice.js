@@ -1,5 +1,5 @@
 import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit";
-import axios, { Axios } from "axios";
+import axios from "axios";
 import { sub } from "date-fns";
 
 const POST_URL = "https://jsonplaceholder.typicode.com/posts";
@@ -75,7 +75,7 @@ const postSlice = createSlice({
         };
       },
     },
-    reactionAdded: (state, action) => {
+    reactionAdded:(state,action) => {
       const { postId, reaction } = action.payload;
       const existingPost = state.posts.find((post) => post.id === postId);
       if (existingPost) {

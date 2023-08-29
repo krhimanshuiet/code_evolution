@@ -10,12 +10,9 @@ const PostsExcerpt = ({post}) => {
     <p className='text-md  text-white'>{post?.content?.substring(0,100)}</p>
     <p>
       <PostAuthor userId={post.userId}/>
-      <TimeAgo timeStamp={post.date} />
-     
-    </p>
-    
-      <ReactionButtons post={post} />
-    
+      <TimeAgo timeStamp={post.date} />     
+    </p>    
+      <ReactionButtons post={post} />    
 </article>
   )
 }

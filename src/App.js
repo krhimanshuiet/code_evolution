@@ -1,19 +1,27 @@
 import "./App.css";
 import { Suspense } from "react";
+import CakeView from "./rtk/features/cake/cakeView"
+import IceCreamView from "./rtk/features/iceCream/iceCreamView"
+import UserView from "./rtk/features/user/userView"
 // import ThemeProvider from "./Hooks/ThemeProvider";
 // const UseImperetiveHandle2 = lazy(() => import("./HooksWebDevSiplified/UseImperetiveHandle2"));
 // const UseContext2 = lazy(() => import("./Hooks/UseContext"));
 // import UseReducers2 from "./Hooks/UseReducers2";
 // import Posts from "./DaveGrayReduxToolkit/features/posts/Posts"
 // import AddPostForm from "./DaveGrayReduxToolkit/features/posts/AddPostForm";
-import YoutubeForm from "./ReactReactHookForm/youtubeForm";
+// import YoutubeForm from "./ReactReactHookForm/youtubeForm";
+
 function App() {
   return (
     <div className="App">
       <Suspense fallback={"loading..."}>
+        <CakeView/>
+        <IceCreamView/>
+        <UserView/>
+        {/* <Input /> */}
         {/* <Posts />
         <AddPostForm/> */}
-        <YoutubeForm/>
+        {/* <YoutubeForm/> */}
       </Suspense>
     </div>
   );
